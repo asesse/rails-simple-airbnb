@@ -5,7 +5,9 @@
 <div class="price"><%= flat.price_per_night %>€</div>
 <div class="guest"><%= flat.number_of_guests %></div>
 <%= link_to 'More Info', flat_path(flat) %>
+<%= link_to 'Edit', edit_flat_path(flat) %>
+<%= link_to 'Remove', flat_path(flat), method: :delete, data: {confirm: "Are you sure?"} %>
 </div>
 <% end %>
 
-<%= link_to 'Create flat', flats_path %>
+<%= link_to 'Create flat', new_flat_path%>
