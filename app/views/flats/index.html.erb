@@ -1,0 +1,11 @@
+<% @flats.each do |flat| %>
+<div class="apt-card">
+<div class="name"><%= flat.name %></div>
+<div class="address"><%= flat.address %></div>
+<div class="price"><%= flat.price_per_night %>€</div>
+<div class="guest"><%= flat.number_of_guests %></div>
+<%= link_to 'More Info', flat_path(flat) %>
+</div>
+<% end %>
+
+<%= link_to 'Create flat', flats_path %>
